@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
+        /* APRENDENDO IF E ELSE */
+        /* Scanner sc = new Scanner(System.in);
         System.out.println("Digite um valor!");
         int hora = sc.nextInt();
 
@@ -15,6 +16,15 @@ public class App {
         else{
             System.out.println("12Boa noite!");
         }
-        sc.close();
+
+        sc.close(); */
+
+        /* APRENDENDO ESTRUTURA DE REPETIÇÃO */
+
+        int j = 5;
+        while(j > 0){
+            System.out.println("O valor de J é = " + j);
+            j -= 1;
+        }
     }
 }
