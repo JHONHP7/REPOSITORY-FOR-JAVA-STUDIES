@@ -1,13 +1,9 @@
 package application;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 import entities.Account;
-import entities.Product2;
 import entities.Products;
 import util.CalcularAlturaPessoa;
 import util.Calculator;
@@ -68,7 +64,7 @@ public class program {
         
         sc3.close();*/
         
-/*        Scanner sc4 = new Scanner(System.in);
+        Scanner sc4 = new Scanner(System.in);
         Account account;
         System.out.print("Enter account number: ");
         int number = sc4.nextInt();
@@ -100,67 +96,10 @@ public class program {
         double withdrawValue = sc4.nextDouble();
         account.withdraw(withdrawValue);
         System.out.println(account);
-        sc4.close(); */
-        
-        				//VETORES\\
-        
-        Scanner sc5 = new Scanner(System.in);
-        int n = sc5.nextInt();
-        Product2[] vect = new Product2[n];
-        for(int i = 0; i< vect.length;i++) {
-        	sc5.nextLine();
-        	String name = sc5.nextLine();
-        	double price = sc5.nextDouble();
-        	
-        	vect[i]= new Product2(name,price); //ADCIONANDO UM PRODUTO NA POSIÇÃO I DO VETOR
-        }
-        double sum = 0.0;
-        for(int i = 0; i< vect.length;i++) {
-        	sum += vect[i].getPrice();
-        }
-        double avg = sum/vect.length;
-        System.out.printf("AVERAGE PRICE = %.2f",avg);		
-        System.out.println("");
-        
-        			//FOR EACH\\
-        System.out.println("----------------");
-        String[] vect2 = new String[]{"Maria", "bob", "Alex"};
-        for(String obj: vect2) {//PARA CADA OBJ CONTIDO NO VECT2 FAÇA O PRINT
-        	System.out.println(obj);
-        }
-        System.out.println("-------------------");
-        			//LISTA\\
-        List<String> list = new ArrayList<>();
-        
-        list.add("Maria");
-        list.add("Bob");
-        list.add("Alex");
-        list.add("Ana");
-        list.add(2,"Marco");
-        System.out.println(list.size());
-        System.out.println("-------------------");
-        for(String x: list) {
-        	System.out.println(x);
-        }
-        System.out.println("-------------------");
+        sc4.close();
         
         
-        list.removeIf(x -> x.charAt(0) == 'M');//função lambda predicado
-        for(String x: list) {
-        	System.out.println(x);
-        }
-        System.out.println("-------------------");
-        System.out.println("Index of Bob: " + list.indexOf("Bob"));
-        System.out.println("-------------------");
-        List<String> result = list.stream().filter(x -> x.charAt(0) == 'A').collect(Collectors.toList());
-        for(String x: result) {
-        	System.out.println(x);
-        }
-        System.out.println("-------------------");
-        String name = list.stream().filter(x -> x.charAt(0) == 'A').findFirst().orElse(null);
-        System.out.println(name);
+       
     }
-    
-    
 
 }
