@@ -1,21 +1,52 @@
 package entities;
 
 public class Products {
-    public String name;
-    public double price;
-    public int quantity;
 
-    /* construtor */
+    String name;
+    private double price;
+    private int quantity;
+
+    /* default constructor */
+
+    
+    public Products(){    
+    }
+
+    /* custom constructors */
     public Products(String name, double price, int quantity) {
-        /* palavra this é uma referência para o 
-        próprio objeto, diferencia atributos de 
-        variáveis locais */
+        /*word "this" is a reference to the
+        object itself, differentiates attributes of
+        local variables */
         
-        this.name = name; // this serve para diferenciar o atributo do objeto do parametro do construtor
+        this.name = name; // this serve for diferenciar o attributes do object do parameters  do constructor
         this.price = price;
         this.quantity = quantity;
            
     }
+    public Products(String name, double price) {
+        
+        this.name = name; 
+        this.price = price;
+           
+    }
+    /* methods */
+    
+    public void setName(String name) { //change private name
+        this.name = name;
+    }
+    public String getName() { //show name
+        return name;
+    }
+    public double getPrice() { //show price
+        return price;
+    }
+    public void setPrice(double price) { //change price
+        this.price = price;
+    }
+    public double getQuantity() { //show quantity
+        return quantity;
+    }
+
     public double totalValueInStock() {
         return price * quantity;
     }
