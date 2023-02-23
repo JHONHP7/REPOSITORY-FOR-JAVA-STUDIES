@@ -3,6 +3,7 @@ package application;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -169,6 +170,8 @@ public class program {
         			// Data e hour \\
         DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault());//IMPORTANTE
+        DateTimeFormatter fmt4 = DateTimeFormatter.ISO_DATE_TIME;
         
         LocalDate d01 = LocalDate.now();
         LocalDateTime d02 = LocalDateTime.now();
@@ -193,6 +196,11 @@ public class program {
         System.out.println("d09 = " + d09.toString());
         System.out.println("d10 = " + d10.toString());
         System.out.println("d11 = " + d11.toString());
+        System.out.println("d12 = " + fmt3.format(d06));
+        System.out.println("d13 = " + d09.format(fmt4));
+    
+    
+    
     }
     
     
